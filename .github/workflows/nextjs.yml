@@ -29,10 +29,9 @@ jobs:
           cache: "pnpm"
 
       - name: Install pnpm
-        run: npm install -g pnpm
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
