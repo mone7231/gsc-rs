@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "pnpm run build && gh-pages -d out"
+    "lint": "next lint"
   },
   "homepage": "https://mone7231.github.io/gsc-rs/",
   "dependencies": {

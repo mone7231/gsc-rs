@@ -4,7 +4,6 @@ const isProd = process.env.NODE_ENV === "production";
 const repoName = "gsc-rs"; // Replace with your GitHub repo name
 
 const nextConfig: NextConfig = {
-  output: "export", // Ensures static file generation
   assetPrefix: isProd ? `/${repoName}/` : "",
   basePath: isProd ? `/${repoName}` : "",
   images: {
