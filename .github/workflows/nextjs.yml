@@ -63,9 +63,6 @@ jobs:
           version: 10
           run_install: false
 
-      - name: Set Production Mode
-        run: echo "NODE_ENV=production" >> $GITHUB_ENV
-
       - name: Get pnpm store directory
         id: pnpm-cache
         shell: bash
@@ -79,6 +76,9 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
+            
+      - name: Set Production Mode
+        run: echo "NODE_ENV=production" >> $GITHUB_ENV
 
       - name: Install dependencies
         run: pnpm install
