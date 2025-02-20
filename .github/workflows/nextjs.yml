@@ -107,6 +107,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+      - name: Set Production Mode
+        run: echo "NODE_ENV=production" >> $GITHUB_ENV
 
   # Deployment job
   deploy:
