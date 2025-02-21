@@ -1,0 +1,10 @@
+{
+    "HomePage": {
+      "title": "你好世界!"
+    },
+    "LocaleSwitcher": {
+      "cn": "Chinese",
+      "en": "English",
+      "label": "Language"
+    }
+  }
